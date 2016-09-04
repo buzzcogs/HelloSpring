@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="helloWorld" class="com.tutorialspoint.HelloWorld" 
+      scope="singleton">
+       <property name="message" value="Wazzup!"/>  
+   </bean>
+   <bean id="someThing" class="com.tutorialspoint.SomeThing">
+       <property name="message" value="Hey Now!"/>      
+   </bean>
+    <bean id="anyThing" class="com.tutorialspoint.AnyThing" 
+      scope="prototype">
+   </bean>
+    <bean id="hamEggs" 
+       class="com.tutorialspoint.HamEggs"
+       init-method="init" destroy-method="destroy">
+       <property name="message" value="Ham and Eggs"/>
+   </bean>
+    <bean id="porkBeans" class="com.tutorialspoint.PorkBeans"
+       init-method="init" destroy-method="destroy">
+       <property name="message" value="Pork and Beans"/>
+   </bean>
+
+   <bean class="com.tutorialspoint.InitHelloWorld" />
+
+</beans>
